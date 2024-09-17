@@ -1,0 +1,7 @@
+web-scaffold/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── scripts.js
+└── README.md
