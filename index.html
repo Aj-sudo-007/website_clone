@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scaffold</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" id="home-link">Home</a></li>
+                <li><a href="#calendar" id="calendar-link">Calendar</a></li>
+                <li><a href="#music" id="music-link">Music Player</a></li>
+                <li><a href="#todo" id="todo-link">To-Do List</a></li> 
+                <li><a href="#gallery" id="gallery-link">Image Gallery</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <div class="container"> 
+            <section id="home">
+                <header class="hero"> 
+                    <h1>Welcome to the Website</h1>
+                    <p>Use the navigation to access different features.</p>
+                    <button class="cta-button">Get Started</button> 
+            
+                    <img src="Pic.JPG" alt="Sea">
+                    <img src="Bird.PNG" alt="Sea">
+
+                </header>
+            </section>
+
+            <section id="calendar" style="display:none;">
+                <h2>Calendar</h2>
+                <div id="calendar-container"></div> 
+                <div id="add-event">
+                    <h3>Add Event</h3>
+                    <input type="text" id="event-title" placeholder="Event Title">
+                    <input type="date" id="event-date">
+                    <input type="time" id="event-time"> 
+                    <button id="add-event-btn">Add Event</button>
+                </div>
+                <div id="event-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Edit/Delete Event</h2>
+                        <input type="text" id="modal-event-title" placeholder="Event Title">
+                        <input type="date" id="modal-event-date">
+                        <input type="time" id="modal-event-time"> 
+                        <button id="edit-event-btn">Edit Event</button>
+                        <button id="delete-event-btn">Delete Event</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="music" style="display:none;">
+                <h2>Music Player</h2>
+                <input type="file" id="music-upload" accept="audio/*"> 
+                <audio id="audio-player" controls></audio> 
+                <div id="playlist"></div> 
+                <div id="player-controls">
+                    <button id="play-pause">Play</button>
+                    <button id="next">Next</button>
+                    <button id="previous">Previous</button>
+                    <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
+                </div>
+            </section>
+            <section id="todo" style="display:none;">
+                <h2>To-Do List</h2>
+                <div id="add-todo">
+                    <input type="text" id="todo-input" placeholder="Add a new task">
+                    <button id="add-todo-btn">Add</button>
+                </div>
+                <ul id="todo-list"></ul> 
+            </section>
+            <section id="gallery" style="display:none;">
+                <h2>Image Gallery</h2>
+                <div id="gallery-container"></div>
+                <input type="file" id="image-upload" multiple accept="image/*">
+                
+                <h2>Title Image</h2>
+                <img id="title-image" src="" alt="Title Image" style="display: none;"> 
+                <button id="remove-title-image-btn" style="display: none;">Remove Title Image</button>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Web Scaffold Project</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    
+</body>
+</html>
